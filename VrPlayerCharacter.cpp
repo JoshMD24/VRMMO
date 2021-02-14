@@ -8,13 +8,7 @@ AVrPlayerCharacter::AVrPlayerCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-}
-
-// Called when the game starts or when spawned
-void AVrPlayerCharacter::BeginPlay()
-{
-	Super::BeginPlay();
-
+	
 	woodcuttingLevel = 1;
 	miningLevel = 1;
 	fishingLevel = 1;
@@ -45,6 +39,12 @@ void AVrPlayerCharacter::BeginPlay()
 	playerMaxHealth = 100;
 	playerHealth = 100;
 	playerBowDamage = 25;
+}
+
+// Called when the game starts or when spawned
+void AVrPlayerCharacter::BeginPlay()
+{
+	Super::BeginPlay();
 }
 
 // Called every frame
